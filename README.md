@@ -12,7 +12,7 @@ Se elegio la relación de uno a muchos (muchos roles pueden estar en un usuario)
 
 # capturas de funcionamiento
 <h5>Agregar rol al usuario</h5>
-<img src="[[pic_trulli.jpg](https://drive.google.com/file/d/1rhLt9wD4bsJB583ZEDL6ZbrR0duX_Uqu/view?usp=sharing)](https://drive.google.com/file/d/1rhLt9wD4bsJB583ZEDL6ZbrR0duX_Uqu/view?usp=sharing)">
+<img src="https://drive.google.com/file/d/1rhLt9wD4bsJB583ZEDL6ZbrR0duX_Uqu/view?usp=sharing">
 
 <h5>Actualizar rol al usuario</h5>
 <img src="https://drive.google.com/file/d/1kzmk7krRcuTI81hBtBdeqiys5eCOZyg8/view?usp=sharing">
@@ -22,3 +22,5 @@ Se elegio la relación de uno a muchos (muchos roles pueden estar en un usuario)
 
 <h5>Listar todos los roles</h5>
 <img src="https://drive.google.com/file/d/1G0b7NNjspIz2-KKRtmW8qdI4QAL0Pj-h/view?usp=sharing">
+
+carpeta: https://drive.google.com/drive/folders/1AZhjSN8CTzJYj4XVDXpK6mkC1TkdTFWv?usp=sharing
