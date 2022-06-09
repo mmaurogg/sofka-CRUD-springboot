@@ -8,6 +8,8 @@ import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import com.crud.democrud.models.UsuarioModel;
 import com.crud.democrud.models.UsuarioRolModel;
@@ -15,23 +17,24 @@ import com.crud.democrud.repositories.UsuarioRepository;
 import com.crud.democrud.repositories.UsuarioRolRepositorio;
 
 
-
+@DataJpaTest
+@AutoConfigureTestDatabase(replace= AutoConfigureTestDatabase.Replace.NONE)
 public class UsuarioRolServiceTest {
 
     @Autowired
     UsuarioRolRepositorio usuarioRolRepositorio;
-    UsuarioRepository usuarioRepository;
 
-    @Test
-    public void testGuardarUsuario(){
-        UsuarioModel usuarioModel=new UsuarioModel("aquaman","aqua@gmail.com",99);
-        UsuarioModel usuarioModelRegistrado = usuarioRepository.save(usuarioModel);
-        assertNotNull(usuarioModelRegistrado);
-    }
+    // @Test
+    // public void testGuardarUsuario(){
+    //     UsuarioModel usuarioModel=new UsuarioModel("aquaman","aqua@gmail.com",99);
+    //     UsuarioModel usuarioModelRegistrado = usuarioRepository.save(usuarioModel);
+    //     assertNotNull(usuarioModelRegistrado);
+    // }
     
     @Test
     public void testGuardarUsuarioRol(){
-        UsuarioRolModel usuarioRolModel = new UsuarioRolModel(Long.valueOf(1), "vendedor");
+        UsuarioModel usuarioModel=new UsuarioModel("aquaman","aqua@gmail.com",99);
+        UsuarioRolModel usuarioRolModel = new UsuarioRolModel(1L, "vengador");
         UsuarioRolModel usuarioRolModelRegistrado = usuarioRolRepositorio.save(usuarioRolModel); 
         assertNotNull(usuarioRolModelRegistrado);
     }
