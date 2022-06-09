@@ -1,5 +1,7 @@
 package com.crud.democrud.models;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -8,12 +10,15 @@ public class UsuarioModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true, nullable = false)
+    @Column(name = "id_usuario", unique = true, nullable = false)
     private Long id;
 
     private String nombre;
     private String email;
     private Integer prioridad;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<UsuarioRolModel> usuarioRoles;
 
     public void setPrioridad(Integer prioridad) {
         this.prioridad = prioridad;

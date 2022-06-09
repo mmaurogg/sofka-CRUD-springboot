@@ -39,6 +39,15 @@ public class UsuarioService {
         }
     }
 
+    public boolean actualizarUsuario(long id, UsuarioModel usuario){
+        usuario.setId(id);
+        try{
+            usuarioRepository.save(usuario);
+            return true;
+        }catch(Exception err){
+            return false;
+        }
+    }
 
     
 }

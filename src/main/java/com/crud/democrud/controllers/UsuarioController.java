@@ -45,4 +45,13 @@ public class UsuarioController {
         }
     }
 
+    @PostMapping(path = "/{id}")
+    public String actualizarUsuario(@PathVariable("id") Long id, @RequestBody UsuarioModel usuario) {
+        boolean ok = this.usuarioService.actualizarUsuario(id, usuario);
+        if (ok) {
+            return "Se actualizó el usuario con id " + id;
+        } else {
+            return "No pudo actualizar el usuario con id" + id;
+        }
+    }
 }
